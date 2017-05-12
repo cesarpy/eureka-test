@@ -1,0 +1,43 @@
+spring:
+  profiles: node1
+  application:
+    name: mi-servidor-eureka
+    
+server:
+  port: 8761
+
+ 
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    virtual-host-name: myOtherHostName
+
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
+
+---
+
+spring:
+  profiles: node2
+  application:
+    name: mi-servidor-eureka
+  
+server:
+  port: 8762
+     
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    hostname: elotro.com
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
