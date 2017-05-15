@@ -34,4 +34,12 @@ class ServiceInstanceRestController {
             @PathVariable String applicationName) {
         return this.discoveryClient.getInstances(applicationName);
     }
+    
+    
+    @RequestMapping("/user")
+    public User getUser() {
+    	User u = new User();
+    	u.setNombre("Cesar el mejor");
+        return u;
+    }
 }
