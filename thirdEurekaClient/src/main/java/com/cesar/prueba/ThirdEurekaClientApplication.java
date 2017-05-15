@@ -39,7 +39,7 @@ public class ThirdEurekaClientApplication {
     public String otro() {
     	doRequest();
     	String a = greetingClient.greeting();
-        return "hosla";
+        return "hoslaaa";
     }
 	 
 	private  void doRequest() {
