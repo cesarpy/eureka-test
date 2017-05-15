@@ -1,0 +1,11 @@
+server:
+  port: 8777
+
+zuul:
+  routes:
+    strings:
+      path: /Elprimer/**
+      serviceId: a-bootiful-client
+    locations:
+      path: /ElFe/**
+      serviceId: spring-cloud-eureka-feign-client
